@@ -16,8 +16,6 @@ def self.notify
     @numbers = [ENV['FEDE_PHONE']]
     @twilio_number = ENV['TWILIO_NUMBER']
     @message_body = "COVID OPEN SPOT PETCO"
-    x = ENV['TWILIO_AUTH_TOKEN']
-    y = ENV['TWILIO_ACCOUNT_SID']
     begin
       @numbers.each do |num|
       @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
