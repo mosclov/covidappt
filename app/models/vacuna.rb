@@ -6,7 +6,7 @@ class Vacuna < ApplicationRecord
     true
   else
     x = self.new(date: DateTime.now)
-    x.save
+    x.save!
     self.notify
     false
   end
