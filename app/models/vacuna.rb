@@ -15,7 +15,7 @@ class Vacuna < ApplicationRecord
 def self.notify
     @numbers = [ENV['FEDE_PHONE']]
     @twilio_number = ENV['TWILIO_NUMBER']
-    @message_body = "COVID OPEN SPOT PETCO"
+    @message_body = "COVID OPEN SPOT PETCO - https://epicproxy.et0502.epichosted.com/ucsd/SignupAndSchedule/EmbeddedSchedule?dept=9990995&id=99909951,99909952,99909953,99909954,99909955,99909956&vt=3550&view=plain&payor=-3"
     begin
       @numbers.each do |num|
       @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
